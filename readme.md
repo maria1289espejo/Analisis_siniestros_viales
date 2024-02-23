@@ -1,6 +1,6 @@
-<h1 align="center">Proyecto de Análisis de Siniestros Viales</h1>
+<h1 align="center"><b>Proyecto de Análisis de Siniestros Viales</b></h1>
 
-![Accidente_vial](C:/Users/57315/Documentos/Phyton_Henry/proyecto_data/imagenes/accident-1497295_1280.jpg)
+<p align='center'> <img src="imagenes/accident-1497295_1280.jpg" alt="Accidente vial" width="600" height="300" ><p>
 
 ## Descripción
 
@@ -63,6 +63,8 @@ En proceso
 
 - **Argentina
 sociodemográfica: Composición de la población.** [https://static.ign.gob.ar/anida/fasciculos/fasc_composicion_poblacion.pdf](https://static.ign.gob.ar/anida/fasciculos/fasc_composicion_poblacion.pdf) [19-02-2024]
+
+[imagen_principal](https://pixabay.com/es/photos/accidente-escape-del-conductor-1497295/)
 
 ## Contacto
 
