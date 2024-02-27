@@ -4,7 +4,10 @@
 
 ## Descripción
 
-Este proyecto tiene como objetivo utilizar técnicas de análisis de datos para abordar el problema de los siniestros viales en la ciudad de Buenos Aires, Argentina, una de las principales causas de muertes violentas en el país; a partir de datos sobre accidentes de tránsito con victimas mortales, ocurridos entre los años 2016 y 2021.
+Este proyecto tiene como objetivo utilizar técnicas de análisis de datos para abordar el problema de los siniestros viales en la ciudad de Buenos Aires, Argentina, una de las principales causas de muertes violentas en el país; a partir de datos sobre accidentes de tránsito con victimas mortales, ocurridos entre los años 2016 y 2021.Los archivos de datasets utilizados estan disponibles en los siguientes enlaces:
+
+- [Datasets iniciales](https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales)
+- [Datasets limpios](https://drive.google.com/drive/folders/1QhtL3rnKpi9biMxNFrk4ngEKSsFBeO1O?usp=drive_link)
 
 ### Contexto
 
@@ -13,6 +16,13 @@ En Argentina, alrededor de 11 personas por día mueren en accidentes de tránsit
 ### Objetivo
 
 El objetivo principal de este proyecto es brindar información útil que permita a las autoridades locales tomar medidas efectivas para reducir la cantidad de víctimas mortales en accidentes de tránsito. Se busca identificar patrones, tendencias y factores de riesgo asociados con los siniestros viales utilizando análisis de datos. Además, se definirán tres Key Performance Indicators (KPI) para medir el impacto de las medidas tomadas en la reducción de fallecidos.
+
+### Contenido
+
+- Carpeta [imagenes](https://github.com/maria1289espejo/Analisis_siniestros_viales/tree/main/imagenes): Contiene imágenes y gif del EDA, dashboard o internet.
+- Archivo [EDA](https://github.com/maria1289espejo/Analisis_siniestros_viales/blob/main/EDA.ipynb): Archivo jupyter notebook del análisis exploratorio de datos.
+- Archivo [dasboard_sniestros_viales](https://github.com/maria1289espejo/Analisis_siniestros_viales/blob/main/dashboard_siniestros_viales.pbix): Archivo de Power BI con tablas, modelo semantico e informe realizado.
+- Archivo [.gitignore](https://github.com/maria1289espejo/Analisis_siniestros_viales/blob/main/.gitignore): Archivo que describe la ruta de los archivos y carpetas del proyecto que no estan en el repositorio virtual.
 
 ## Tecnologias Usadas
 
@@ -24,7 +34,8 @@ La transformación, limpieza y EDA fueron realizados con Python 3.10.4 en Visual
 - matplotlib.pyplot: Creación de gráficos
 - datetime: Manipulación de datos de fecha y hora
 
-El dashboard fue realizado con Power BI 2.124.2028.0
+El dashboard fue realizado con Power BI 2.124.2028.0, los archivos .gif fueron creados con la aplicación online Canva.
+
 
 ## EDA
 
@@ -66,7 +77,7 @@ Victimas por sexo a lo largo del tiempo
 
 <p align='center'> <img src="imagenes\Evolucion_recuento_victimas_por_sexo.gif" alt="Accidente vial"><p>
 
-A nivel de dia de la semana, mensual y anual, la mayoria de las victimas son de sexo masculino; los periodos con mayor ocurrencia de accidentes fatales son los dias lunes y sabado, los meses de enero y diciembre y los años 2016 y 2018 para el sexo masculino y los dias miercoles y viernes, los meses de noviembre y diciembre, los años 2018 y 2017, sim embargo no se observa una tendencia de estacionalidad, ya que estas observaciones no se repiten en todos los años.
+A nivel de dia de la semana, mensual y anual, la mayoria de las victimas son de sexo masculino; los periodos con mayor ocurrencia de accidentes fatales son los dias lunes y sabado, los meses de enero y diciembre y los años 2016 y 2018 para el sexo masculino y los dias miercoles y viernes, los meses de noviembre y diciembre, los años 2018 y 2017, sim embargo no se observa una tendencia de estacionalidad, ya que estas observaciones no se repiten en todos los años. En ambos sexos se observa reducción en la cantidad de homicidios, esto podría atribuirse a las medidas de restricción de circulación implementadas durante esos años debido a un problema de salud pública mundial.
 
 <p align='center'> <img src="imagenes\Distribucion_victimas_segun_vehiculo, rol y sexo.gif" alt="Accidente vial"><p>
 <p align='center'> <img src="imagenes\Distribucion_edades _victimas_por_vehiculo_sexo.png" alt="Accidente vial"><p>
@@ -78,13 +89,34 @@ A nivel de dia de la semana, mensual y anual, la mayoria de las victimas son de 
 
 ### Ubicación
 
-Las coordenadas con mayor incidencia de accidentes mortales son latitud... y longitud ..., el tipo de calle mas peligroso son las avenidad, las 5 avenidad mas accidentadas on : ...
+<p align='center'> <img src="imagenes\Victimas_por_latiud_longitud.gif" alt="Accidente vial"><p>
+
+El tipo de calle más peligroso son las avenidas, las 5 calles más incidencia de accidentes fatales son:
+
+- PAZ GRAL. AV., la mayoría de estas victimas se desplazaban en moto
+- RIVADAVIA AV., la mayoría de estas victimas eran peatones
+- DEL LIBERTADOR AV., la mayoría de estas victimas se desplazaban en moto
+- ALBERTI, JUAN BAUTISTA AV., la mayoría de estas victimas eran peatones
+- AUTOPISTA 1 SUR PRESIDENTE ARTURO FRONDIZI, la mayoría de estas victimas se desplazaban en moto
 
 ### KPI's
+
+#### Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior
+
+<p align='center'> <img src="imagenes\KPI_reduccion_tasa_homicidos_general_semestral.gif" alt="Accidente vial"><p>
+
+#### Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior
+
+<p align='center'> <img src="imagenes\KPI_reduccion_cantidad_accidentes_motociclistas.gif" alt="Accidente vial"><p>
+
+#### Reducir en un 5% la tasa de homicidios de peatones en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios de peatones en siniestros viales del año anterior
+
+<p align='center'> <img src="imagenes\KPI_reduccion_tasa_homicidos_peatones_anual.gif" alt="Accidente vial"><p>
 
 ### Recomendaciones
 
 - Realizar campañas de educación y prevención con los grupos de tipo de vehículo y rol más vulnerables como los motociclistas conductores y peatones.
+- Revisar y de ser posible y/o necesario optimizar los limites de velocidad, la ubicación de semaforos o puentes peatonales en los sitios conmayor ocurrencia de accidnetes con victimas fatales.
 
 ## Estado del proyecto
 
