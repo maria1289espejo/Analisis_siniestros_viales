@@ -61,11 +61,11 @@ Después se creo la tabla ID_hechos como una tabla puente, con los valores únic
 
 Se creo un documento .pbix con un informe de 4 paginas: Portada, Sexo y Edad, Ubicación y KPI's, para la página de sexo y edad fue necesario conocer la clasificación de grupos etarios, la cual se consulto en un documento de el Instituto Geográfico Nacional de la República Argentina. Para la página KPI's fue necesario crear y añadir al modelo semantico 3 tablas que contienen los datos, cálculos y medidas requeridas para utilizar las tarjetas KPI y conocer el numero de habitantes de la Ciudad Autonoma de Buenos Aires entre los años 2016 y 2021, esta información se obtuvo del Instituto Nacional de Estadística y Censos INDEC. Los KPI's utlizados fueron:
 
-- Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior.
+- Reducción del 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior.
 
-- Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior.
+- Reducción del 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior.
 
-- Reducir en un 5% la tasa de homicidios de peatones en siniestros viales en el último año, en CABA, respecto al año anterior.
+- Reducción del 5% la tasa de homicidios de peatones en siniestros viales en el último año, en CABA, respecto al año anterior.
 
 Puede ver esta información de manera detallada en el archivo [dashboard_siniestros_viales.pbix](https://github.com/maria1289espejo/Analisis_siniestros_viales/blob/main/dashboard_siniestros_viales.pbix)
 
@@ -77,7 +77,7 @@ Victimas por sexo a lo largo del tiempo
 
 <p align='center'> <img src="imagenes\Evolucion_recuento_victimas_por_sexo.gif" alt="Accidente vial"><p>
 
-A nivel de dia de la semana, mensual y anual, la mayoria de las victimas son de sexo masculino; los periodos con mayor ocurrencia de accidentes fatales son los dias lunes y sabado, los meses de enero y diciembre y los años 2016 y 2018 para el sexo masculino y los dias miercoles y viernes, los meses de noviembre y diciembre, los años 2018 y 2017, sim embargo no se observa una tendencia de estacionalidad, ya que estas observaciones no se repiten en todos los años. En ambos sexos se observa reducción en la cantidad de homicidios, esto podría atribuirse a las medidas de restricción de circulación implementadas durante esos años debido a un problema de salud pública mundial.
+A nivel de dia de la semana, mensual y anual, la mayoria de las victimas son de sexo masculino; los periodos con mayor ocurrencia de accidentes fatales son los dias lunes y sabado, los meses de enero y diciembre y los años 2016 y 2018 para el sexo masculino y los dias miercoles y viernes, los meses de noviembre y diciembre, los años 2018 y 2017, sim embargo no se observa una tendencia de estacionalidad, ya que estas observaciones no se repiten en todos los años evaluados. En ambos sexos se observa reducción en la cantidad de homicidios en el año 2020, esto podría atribuirse a las medidas de restricción de circulación implementadas durante este año debido a un problema de salud pública mundial.
 
 <p align='center'> <img src="imagenes\Distribucion_victimas_segun_vehiculo, rol y sexo.gif" alt="Accidente vial"><p>
 <p align='center'> <img src="imagenes\Distribucion_edades _victimas_por_vehiculo_sexo.png" alt="Accidente vial"><p>
@@ -86,6 +86,10 @@ A nivel de dia de la semana, mensual y anual, la mayoria de las victimas son de 
 - La mitad de las victimas de sexo masculino que se desplazaban en moto, auto, bicicleta o vehículos de emergencia tenian alrededor 30 años.
 - La totalidad de las victimas de sexo femenino que se dessplazaban como pasajeros de transporte publico pertenecian a la tercera edad.
 - Las victimas que se desplazaban como peatones son las que tienen el rango de edad más amplio, mientras las que se desplazaban en vehículos de emergencias presentan el rango de edad mas corto.
+
+<p align='center'> <img src="imagenes\Accidentes_por_hora.PNG" alt="Accidente vial"><p>
+
+Las horas con mas accidentes son las 7 y 6 horas, con 42 y 39 resgistros respectivamente, mientras las horas con menos accidentes son las 2 y las 13 horas ambas con 17 registros, esto sugiere que hay mayor ocurrencia en las horas pico de la manaña que en las de la tarde, , lo cual es consistente con el tráfico intenso durante las horas de la mañana cuando las personas se dirigen al trabajo, la escuela u otras actividades.
 
 ### Ubicación
 
@@ -101,22 +105,72 @@ El tipo de calle más peligroso son las avenidas, las 5 calles más incidencia d
 
 ### KPI's
 
-#### Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior
+#### Reducción del 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior
 
 <p align='center'> <img src="imagenes\KPI_reduccion_tasa_homicidos_general_semestral.gif" alt="Accidente vial"><p>
 
-#### Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior
+Definido como: (Número de homicidios en siniestros viales / Población total) * 100,000
+
+Métrica: Tasa de homicidios en siniestros viales de los últimos seis meses
+Objetivo: Lograr una disminución del 10% en la tasa de homicidios en siniestros viales entre dos semestres consecutivos.
+
+Donde:
+
+Número de homicidios en siniestros viales = Suma de variable `N_VICTIMAS` de la tabla Hechos
+
+Población total =  De acuerdo al documento de población estimada:
+
+| Año     | Población  |
+|---------|------------|
+| 2016    | 3059122    |
+| 2017    | 3063728    |
+| 2018    | 3068043    |
+| 2019    | 3072029    |
+| 2020    | 3075646    |
+| 2021    | 3078836    |
+
+#### Reducción del 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior
 
 <p align='center'> <img src="imagenes\KPI_reduccion_cantidad_accidentes_motociclistas.gif" alt="Accidente vial"><p>
 
-#### Reducir en un 5% la tasa de homicidios de peatones en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios de peatones en siniestros viales del año anterior
+Definido como: (Número de accidentes mortales con víctimas en moto en el año anterior - Número de accidentes mortales con víctimas en moto en el año actual) / (Número de accidentes mortales con víctimas en moto en el año anterior) * 100
+
+Métrica: Cantidad de accidentes mortales de motociclistas en el último año
+Objetivo: Lograr una disminución del 7% en la cantidad de accidentes mortales de motociclistas entre dos años consecutivos.
+
+Donde:
+
+Número de accidentes mortales con víctimas en moto = Suma de variable `N_VICTIMAS` de la tabla Hechos filtrado por la columna victima donde sea igual a `MOTO`.
+
+#### Reducción del 5% la tasa de homicidios de peatones en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios de peatones en siniestros viales del año anterior
 
 <p align='center'> <img src="imagenes\KPI_reduccion_tasa_homicidos_peatones_anual.gif" alt="Accidente vial"><p>
 
+Definido como: (Número de homicidios de peatones en siniestros viales / Población total) * 100,000
+
+Métrica: Tasa de homicidios en siniestros viales en el último año
+Objetivo: Lograr una disminución del 5% en la tasa de homicidios de peatones en siniestros viales entre dos años consecutivos.
+
+Donde:
+
+Número de homicidios de peatones en siniestros viales = Suma de variable `N_VICTIMAS` de la tabla Hechos filtrado por la columna victima donde sea igual a `PEATON`.
+
+Población total =  De acuerdo al documento de población estimada:
+
+| Año     | Población  |
+|---------|------------|
+| 2016    | 3059122    |
+| 2017    | 3063728    |
+| 2018    | 3068043    |
+| 2019    | 3072029    |
+| 2020    | 3075646    |
+| 2021    | 3078836    |
+
 ### Recomendaciones
 
-- Realizar campañas de educación y prevención con los grupos de tipo de vehículo y rol más vulnerables como los motociclistas conductores y peatones.
-- Revisar y de ser posible y/o necesario optimizar los limites de velocidad, la ubicación de semaforos o puentes peatonales en los sitios conmayor ocurrencia de accidnetes con victimas fatales.
+- Realizar campañas de educación y prevención con enfasis en los grupos de tipo de vehículo y rol más vulnerables como los motociclistas conductores y peatones.
+- Revisar y de ser posible optimizar los limites de velocidad, las señalizaciones, la ubicación de semaforos y/o puentes peatonales en los sitios con mayor ocurrencia de accidnetes con victimas fatales.
+- Continuar el monitoreo y seguimiento de los indicadores, para evaluar la efectividad de las medidas implementadas y realizar ajustes de ser necesario.
 
 ## Estado del proyecto
 
