@@ -174,7 +174,20 @@ Población total =  De acuerdo al documento de población estimada:
 
 ## Estado del proyecto
 
-En proceso
+El proyecto ha avanzado satisfactoriamente hasta el momento, cumpliendo con los objetivos principales establecidos. Se han completado las siguientes etapas:
+
+Análisis inicial de datos (EDA) y Transformación (ETL): Se realizó una exploración exhaustiva de los datos iniciales para comprender su estructura, calidad y distribución. Posteriormente, se llevaron a cabo acciones de limpieza y transformación de los datos para prepararlos adecuadamente para su análisis y visualización.
+
+Desarrollo del Dashboard: Utilizando las herramientas adecuadas, se ha creado un dashboard interactivo que presenta de manera clara y concisa los principales hallazgos del análisis de datos. Este dashboard proporciona una visión general de los siniestros viales y permite a los usuarios explorar los datos de manera intuitiva.
+
+Medición y visualización de KPIs: Se han definido y calculado tres Key Performance Indicators (KPIs) relevantes para el proyecto. Estos KPIs se han integrado en el dashboard y se han diseñado visualizaciones específicas para monitorizar su evolución a lo largo del tiempo.
+
+A pesar de estos logros, algunas actividades adicionales que podrían enriquecer el proyecto no se han llevado a cabo hasta el momento. Estas incluyen:
+
+Creación de una base de datos en un motor SQL y la ingestión del dataset procesado para utilizarla como fuente de datos del dashboard.
+Ejecución de scripts de Python dentro de la herramienta de visualización de datos seleccionada para ampliar las capacidades analíticas.
+Cruce de datos con datasets complementarios para enriquecer el análisis y obtener información adicional.
+Aunque estas actividades son opcionales y no eran obligatorias para cumplir con los objetivos principales del proyecto, podrían considerarse en futuras iteraciones para mejorar aún más la calidad y la profundidad del análisis de datos sobre siniestros viales.
 
 ## Referencias
 
