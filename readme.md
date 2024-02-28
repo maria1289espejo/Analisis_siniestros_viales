@@ -36,7 +36,6 @@ La transformación, limpieza y EDA fueron realizados con Python 3.10.4 en Visual
 
 El dashboard fue realizado con Power BI 2.124.2028.0, los archivos .gif fueron creados con la aplicación online Canva.
 
-
 ## EDA
 
 Se realizó una exploración inicial de los archivos para identificar la cantidad de filas y columnas, el tipo de datos y la presencia de valores faltantes, nulos, duplicados y únicos. Se llevaron a cabo acciones de limpieza de datos, incluida la corrección, imputación o eliminación de valores inconsistentes, como imputación por moda y reemplazo por cero, entre otras. Posteriormente, se procedió al análisis descriptivo, donde se examinaron las distribuciones y comportamientos de las variables mediante estadísticas resumidas, visualizaciones gráficas y análisis correspondientes. Se generaron archivos con los dataframe limpios en formato .csv para su posterior uso en otras tecnologías. Puede ver esta información de manera detallada en el archivo  [EDA.ipynb](https://github.com/maria1289espejo/Analisis_siniestros_viales/blob/main/EDA.ipynb).
@@ -61,11 +60,11 @@ Después se creo la tabla ID_hechos como una tabla puente, con los valores únic
 
 Se creo un documento .pbix con un informe de 4 paginas: Portada, Sexo y Edad, Ubicación y KPI's, para la página de sexo y edad fue necesario conocer la clasificación de grupos etarios, la cual se consulto en un documento de el Instituto Geográfico Nacional de la República Argentina. Para la página KPI's fue necesario crear y añadir al modelo semantico 3 tablas que contienen los datos, cálculos y medidas requeridas para utilizar las tarjetas KPI y conocer el numero de habitantes de la Ciudad Autonoma de Buenos Aires entre los años 2016 y 2021, esta información se obtuvo del Instituto Nacional de Estadística y Censos INDEC. Los KPI's utlizados fueron:
 
-- Reducción del 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior.
+- Reducción del 10% de la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior.
 
-- Reducción del 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior.
+- Reducción del 7% de la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior.
 
-- Reducción del 5% la tasa de homicidios de peatones en siniestros viales en el último año, en CABA, respecto al año anterior.
+- Reducción del 5% de la tasa de homicidios de peatones en siniestros viales en el último año, en CABA, respecto al año anterior.
 
 Puede ver esta información de manera detallada en el archivo [dashboard_siniestros_viales.pbix](https://github.com/maria1289espejo/Analisis_siniestros_viales/blob/main/dashboard_siniestros_viales.pbix)
 
