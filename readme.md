@@ -134,7 +134,7 @@ Población total =  De acuerdo al documento de población estimada:
 
 Definido como: (Número de accidentes mortales con víctimas en moto en el año anterior - Número de accidentes mortales con víctimas en moto en el año actual) / (Número de accidentes mortales con víctimas en moto en el año anterior) * 100
 
-Métrica: Cantidad de accidentes mortales de motociclistas en el último año
+Métrica: Número de accidentes mortales con víctimas en moto en el último año
 Objetivo: Lograr una disminución del 7% en la cantidad de accidentes mortales de motociclistas entre dos años consecutivos.
 
 Donde:
